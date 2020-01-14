@@ -66,6 +66,11 @@ namespace BinarySearchTree
                 : default;
         }
 
+        internal void CompareTo(object value, object le)
+        {
+            throw new NotImplementedException();
+        }
+
         public T NewValue { get; }
     }
 }

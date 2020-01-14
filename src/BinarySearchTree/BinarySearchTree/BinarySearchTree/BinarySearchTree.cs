@@ -52,5 +52,51 @@ namespace BinarySearchTree
             return root.TraverseInOrder();
 
         }
+
+        public void Remove(T value)
+        {
+            root = Remove(root, value);
+        }
+
+        private TreeNode<T> Remove(TreeNode<T> subtreeRoot, T value)
+        {
+            if (subtreeRoot == null)
+            {
+                return null;
+            }
+
+            var compareTo = value.CompareTo(subtreeRoot.Value);
+            if (compareTo < 0)
+            {
+                // Value to remove is less than value of actual node -> move left through the tree
+                subtreeRoot.LeftChild = Remove(subtreeRoot.LeftChild, value);
+            }
+            else if (compareTo > 0)
+            {
+                // Value to remove is greater than value of actual node -> move right through the tree
+                subtreeRoot.RightChild = Remove(subtreeRoot.RightChild, value);
+            }
+            else
+            {
+                // We reached the value to remove
+                if (subtreeRoot.LeftChildIsLeaf())
+                {
+                    return subtreeRoot.RightChild;
+                }
+
+                if (subtreeRoot.RightChildIsLeaf())
+                {
+                    return subtreeRoot.LeftChild;
+                }
+
+                // Actual node has two childs
+                subtreeRoot.Value = subtreeRoot.RightChild.Min();
+
+                // Move on through the right tree to remove the leaf node we've taken the value from
+                subtreeRoot.RightChild = Remove(subtreeRoot.RightChild, subtreeRoot.Value);
+
+            }
+            return subtreeRoot;
+        }
     }
 }

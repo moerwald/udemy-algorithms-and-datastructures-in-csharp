@@ -11,7 +11,9 @@ namespace BinarySearchTree
             bst.Insert(2);
             bst.Insert(4);
             bst.Insert(0);
-            bst.Insert(987);
+            bst.Insert(98);
+            bst.Insert(150);
+            bst.Insert(120);
             bst.Insert(38);
             bst.Insert(35);
             bst.Insert(19);
@@ -27,6 +29,12 @@ namespace BinarySearchTree
             bst.Get(19).IfSome(
                 v => Console.WriteLine(v.Value) 
                 );
+
+            bst.Remove(98);
+            foreach (var i in bst.TraverseInOrder())
+            {
+                Console.WriteLine(i);
+            }
 
             Console.ReadLine();
         }

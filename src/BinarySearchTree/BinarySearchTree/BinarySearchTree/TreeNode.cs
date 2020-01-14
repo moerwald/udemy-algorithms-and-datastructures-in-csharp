@@ -9,11 +9,14 @@ namespace BinarySearchTree
         private TreeNode<T> leftChild;
         private TreeNode<T> rightChild;
 
-        public T Value { get; private set; }
-        public TreeNode<T> LeftChild { get => leftChild; private set => leftChild = value; }
-        public TreeNode<T> RightChild { get => rightChild; private set => rightChild = value; }
+        public T Value { get;  set; }
+        public TreeNode<T> LeftChild { get => leftChild;  set => leftChild = value; }
+        public TreeNode<T> RightChild { get => rightChild;  set => rightChild = value; }
 
         public TreeNode(T value) => Value = value;
+
+        public bool LeftChildIsLeaf() => LeftChild == null;
+        public bool RightChildIsLeaf() => RightChild == null;
 
         public void Insert(T newValue)
         {
