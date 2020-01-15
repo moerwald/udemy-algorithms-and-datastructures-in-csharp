@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolTablesAndHashTables", "SymbolTablesAndHashTables\SymbolTablesAndHashTables.csproj", "{A419DEBD-8ED0-4B62-8B49-4DE40299995B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SymbolTablesAndHashTables", "SymbolTablesAndHashTables\SymbolTablesAndHashTables.csproj", "{A419DEBD-8ED0-4B62-8B49-4DE40299995B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbolTablesAndHashTables.Tests", "SymbolTablesAndHashTables.Tests\SymbolTablesAndHashTables.Tests.csproj", "{D2091AFF-190F-4005-985D-031E498EE8E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A419DEBD-8ED0-4B62-8B49-4DE40299995B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A419DEBD-8ED0-4B62-8B49-4DE40299995B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A419DEBD-8ED0-4B62-8B49-4DE40299995B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2091AFF-190F-4005-985D-031E498EE8E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2091AFF-190F-4005-985D-031E498EE8E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2091AFF-190F-4005-985D-031E498EE8E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2091AFF-190F-4005-985D-031E498EE8E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
