@@ -3,7 +3,7 @@
 namespace SymbolTablesAndHashTables.Tests
 {
     [TestFixture]
-    class SequentialSearchSt
+    class SequentialSearchStTests
     {
         [Test]
         public void Add_One_Entry()
